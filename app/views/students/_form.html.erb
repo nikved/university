@@ -1,0 +1,42 @@
+<%= form_for resource, :html => { :class => 'well form-horizontal' } do |f| %>
+    <fieldset>
+
+      <legend>Edit</legend>
+
+      <div class="control-group">
+        <%= f.label :username, :class => 'control-label' %>
+        <div class="controls">
+          <%= f.text_field :username, :class => 'input-xlarge' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :first_name, :class => 'control-label' %>
+        <div class="controls">
+          <%= f.text_field :first_name, :class => 'input-xlarge' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :last_name, :class => 'control-label' %>
+        <div class="controls">
+          <%= f.text_field :last_name, :class => 'input-xlarge' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :birthday, :class => 'control-label' %>
+        <div class="controls">
+          <%= f.text_field :birthday, :class => 'input-xlarge', 'data-datepicker' => "datepicker"  %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <div class="controls">
+          <%= f.submit 'Save', :class => 'btn btn-primary' %>
+          <%= link_to 'Cancel', @student, :class => 'btn' %>
+        </div>
+      </div>
+
+    </fieldset>
+<% end %>

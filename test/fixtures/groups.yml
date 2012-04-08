@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  faculty_id: 1
+  branch_id: 1
+  cathedra_id: 1
+
+two:
+  faculty_id: 1
+  branch_id: 1
+  cathedra_id: 1

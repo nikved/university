@@ -1,0 +1,9 @@
+<tr id="<%= "lesson_#{lesson.id}" %>">
+  <td><%= lesson.strftime %></td>
+  <td><%= lesson.name %></td>
+  <td><%= lesson.teacher.name %>
+  <td><%= lesson.lecture? ? 'Yes' : 'No' %></td>
+  <td><%= lesson.room %></td>
+  <td><%= tooltip lesson.notes %></td>
+  <td><%= link_to(lesson, :method => :delete, :remote => true, :confirm => 'Are you sure you want to delete this?') { '&#xD7;'.html_safe  } if lesson.student == current_user %></td>
+</tr>

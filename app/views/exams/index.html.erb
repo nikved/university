@@ -1,0 +1,21 @@
+<div class="page-header">
+  <h1>Exams <%=raw "(#{link_to 'my', exams_path(:group_id => current_user.group_id)})" if current_user.group%></h1>
+</div>
+
+<%= render 'filter_form' %>
+
+<table class="table table-striped well">
+  <thead>
+  <tr>
+    <th>Group</th>
+    <th>Time</th>
+    <th>Lesson name</th>
+    <th>Teacher</th>
+    <th>Room</th>
+    <th>Notes</th>
+  </tr>
+  </thead>
+  <tbody>
+    <%= render collection %>
+  </tbody>
+</table>

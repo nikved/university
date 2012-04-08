@@ -1,0 +1,17 @@
+<div class="modal" id="myModal">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">&#xD7;</a>
+    <% if header.present? %>
+        <h3><%= header %></h3>
+    <% end %>
+  </div>
+  
+  <% if body.present? %>
+      <div class="modal-body"><%= body %></div>
+  <% end %>
+
+  <% if footer.present? %>
+      <div class="modal-footer"><%= footer %></div>
+  <% end %>
+
+</div>

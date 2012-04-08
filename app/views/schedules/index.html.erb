@@ -1,0 +1,16 @@
+<div class="page-header">
+  <h1>Schedules <%=raw "(#{link_to 'my', current_user.schedule})" if current_user.group %></h1>
+</div>
+
+<%= render 'filter_form' %>
+
+<table class="table table-striped well">
+  <thead>
+  <tr>
+    <th>Results</th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render collection %>
+  </tbody>
+</table>

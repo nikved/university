@@ -1,0 +1,12 @@
+var notification = null;
+var form = $('#new_lesson');
+
+<% if @lesson.errors.empty? %>
+  notification = '<%=j flash_message(:success, "Lesson \"#{@lesson.name}\" created") %>';
+  $('#day_<%= @lesson.day_id %>_body').append('<%=j render @lesson %>');
+<% else %>
+  notification = '<%=j flash_message(:error, @lesson.errors.full_messages.join(', ')) %>';
+<% end %>
+
+clearForm(form);
+form.find('.form-notifications').html(notification);

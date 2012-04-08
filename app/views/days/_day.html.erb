@@ -1,0 +1,18 @@
+<h2><%= day.name %></h2>
+<table class="table table-striped well">
+  <thead>
+  <tr>
+    <th>Time</th>
+    <th>Name</th>
+    <th>Teacher</th>
+    <th>Lecture</th>
+    <th>Room</th>
+    <th>Notes</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody id="day_<%= day.id %>_body">
+    <%= render day.lessons %>
+    <%= render day.lessons_for(current_user) %>
+  </tbody>
+</table>

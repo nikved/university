@@ -1,0 +1,22 @@
+<div class="well">
+  <%= form_tag sessions_path do %>
+      <fieldset>
+        <legend>Login</legend>
+        <div class="control-group">
+          <%= text_field_tag :email, params[:email], :class => 'input-large focused' %>
+        </div>
+        <div class="control-group">
+          <%= password_field_tag :password, nil, :class => 'input-large' %>
+        </div>
+        <div class="control-group">
+          <label class="checkbox">
+            <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+            Remember me
+          </label>
+        </div>
+        <div class="control-group">
+          <%= submit_tag 'Login', :class => 'btn btn-primary' %>
+        </div>
+      </fieldset>
+  <% end %>
+</div>

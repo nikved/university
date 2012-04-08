@@ -1,0 +1,5 @@
+$('body').append('<%=j modal('New Lesson', render('form')) %>');
+$('.modal').modal();
+$('.modal').on('hidden', function () {
+    $('.modal').remove();
+});

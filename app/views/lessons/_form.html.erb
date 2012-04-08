@@ -1,0 +1,61 @@
+<%= form_for @lesson, :html => { :class => 'form-horizontal' }, :remote => true do |f| %>
+    <div class="form-notifications"></div>
+    <fieldset>
+      <div class="control-group">
+        <%= f.label :day, :class => 'control-label' %>
+        <div class="controls">
+          <%= f.select :day_id, options_from_collection_for_select(@days, :id, :name), :include_blank => true %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :time, :class => 'control-label' %>
+        <div class="controls controls-mini">
+          <%= f.time_select :time, :include_blank => true %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :name, :class => 'control-label' %>
+        <div class="controls">
+          <%= f.text_field :name %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :teacher, :class => 'control-label' %>
+        <div class="controls">
+          <%= f.select :teacher_id, options_from_collection_for_select(AdminUser.all, :id, :name), :include_blank => true %>
+        </div>
+      </div>  
+
+      <div class="control-group">
+        <%= f.label :room, :class => 'control-label' %>
+        <div class="controls">
+          <%= f.text_field :room %>
+        </div>
+      </div>    
+
+      <div class="control-group">
+        <div class="controls">
+          <label class="checkbox">
+            <%= f.check_box :lecture %>
+            Lecture
+          </label>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= f.label :notes, :class => 'control-label' %>
+        <div class="controls">
+          <%= f.text_field :notes %>
+        </div>
+      </div>
+      
+      <div class="control-group">
+        <div class="controls">
+          <%= f.submit 'Create', :class => 'btn btn-primary' %>
+        </div>
+      </div>
+    </fieldset>
+<% end %>
